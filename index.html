@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── PAGE TITLE & META ── -->
+  <title>SparkClean — Professional Cleaning Services</title>
+  <meta name="description" content="Professional residential and commercial cleaning services. Free quotes, insured teams, satisfaction guaranteed." />
+
+  <!-- ── STYLESHEET ── -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<!-- ============================================================
+     NAV
+     Edit: logo name, phone number, and nav links
+     ============================================================ -->
+<nav>
+  <a class="logo" href="#">Spark<span class="dot">.</span>Clean</a>
+
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    <a class="nav-phone" href="tel:+15550000000">(555) 000-0000</a>
+    <a href="#contact" class="btn btn-white">Get a Quote</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO
+     Edit: headline, subtext, bullet list, phone number
+     ============================================================ -->
+<section class="hero" id="top">
+
+  <!-- Left: text -->
+  <div class="hero-text">
+    <span class="hero-eyebrow">Professional Cleaning Services</span>
+
+    <h1>Clean Spaces.<br /><em>Every Time.</em></h1>
+
+    <p class="hero-sub">
+      Residential and commercial cleaning done right. We show up on schedule,
+      clean thoroughly, and leave your space spotless — guaranteed.
+    </p>
+
+    <ul class="hero-bullets">
+      <li>Background-checked, insured cleaning teams</li>
+      <li>Free on-site quote — we come to you</li>
+      <li>Residential and commercial programs</li>
+      <li>Weekly, bi-weekly, and monthly scheduling</li>
+      <li>100% satisfaction guarantee</li>
+    </ul>
+
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-white btn-lg">Get a Free Quote</a>
+      <a href="#services" class="btn btn-outline-white btn-lg">Our Services</a>
+    </div>
+
+    <a class="hero-phone" href="tel:+15550000000">
+      (555) 000-0000 <span>— Call anytime, 7 days a week</span>
+    </a>
+  </div>
+
+  <!-- Right: quote form card -->
+  <div class="hero-form-card">
+    <div class="form-card-header">
+      <h3>Request a Free Quote</h3>
+      <p>We reply in 5 minutes or less. No spam.</p>
+    </div>
+
+    <!-- Edit: promo offer text -->
+    <div class="form-card-offer">🎉 20% off your first cleaning — new customers only</div>
+
+    <div class="form-card-body">
+      <form id="hero-form" onsubmit="handleForm(event, 'hero-form', 'hero-success')">
+        <div class="field-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Jane Smith" required />
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(555) 000-0000" required />
+          </div>
+          <div class="field-group">
+            <label>Email</label>
+            <input type="email" placeholder="jane@email.com" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Service Needed</label>
+          <select required>
+            <option value="" disabled selected>Select a service…</option>
+            <option>Residential — Standard Cleaning</option>
+            <option>Residential — Deep Cleaning</option>
+            <option>Residential — Move-In / Move-Out</option>
+            <option>Commercial — Office Cleaning</option>
+            <option>Commercial — Retail / Storefront</option>
+            <option>Commercial — Post-Construction</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label>Tell us about your space (optional)</label>
+          <textarea placeholder="Size, frequency, special requests…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent btn-full">Get My Free Quote →</button>
+        <p class="form-note-small">By submitting, you agree we may contact you about your request.</p>
+        <div class="form-reply-badge">Free on-site walkthrough included</div>
+      </form>
+      <div class="success-msg" id="hero-success">
+        ✅ Got it! A real person will reach out within 5 minutes with your custom quote.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     MARQUEE — scrolling strip
+     Edit: add or remove <span class="marquee-item"> entries.
+     Duplicate the full list once so the loop is seamless.
+     ============================================================ -->
+<div class="marquee-section">
+  <p class="marquee-label">Trusted by homeowners &amp; businesses</p>
+  <div class="marquee-track">
+    <!-- First copy -->
+    <span class="marquee-item">Residential Homes</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Office Buildings</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Retail Storefronts</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Medical Offices</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Apartments</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Warehouses</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Schools</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Restaurants</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Property Management</span>
+    <span class="marquee-item">·</span>
+    <!-- Duplicate copy for seamless loop -->
+    <span class="marquee-item">Residential Homes</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Office Buildings</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Retail Storefronts</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Medical Offices</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Apartments</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Warehouses</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Schools</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Restaurants</span>
+    <span class="marquee-item">·</span>
+    <span class="marquee-item">Property Management</span>
+    <span class="marquee-item">·</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     STATS
+     Edit: the number and label inside each .stat block
+     ============================================================ -->
+<section class="section section-darker">
+  <div class="stats-grid">
+    <div class="stat">
+      <span class="stat-num">500+</span>
+      <span class="stat-label">Happy Clients</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">5K+</span>
+      <span class="stat-label">Cleanings Completed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4.9★</span>
+      <span class="stat-label">Average Google Rating</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICES
+     Edit: icon emoji, title, and description for each card.
+     Add or remove .service-card blocks as needed.
+     ============================================================ -->
+<section class="section section-dark" id="services">
+  <div class="section-header">
+    <span class="eyebrow eyebrow-light">What We Do</span>
+    <h2 class="section-title">Cleaning Services<br />Built Around You.</h2>
+    <p class="section-sub">Residential and commercial programs. One company, one standard, done right every visit.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon-wrap">🏠</div>
+      <h3>Standard Home Cleaning</h3>
+      <p>Weekly, bi-weekly, or monthly cleaning of kitchens, bathrooms, bedrooms, and living areas. Customized to your home.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrap">🔍</div>
+      <h3>Deep Cleaning</h3>
+      <p>Top-to-bottom scrubbing — baseboards, appliances, tile grout, inside cabinets. Perfect for seasonal resets or first-time cleans.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrap">📦</div>
+      <h3>Move-In / Move-Out</h3>
+      <p>Leave the old place spotless or start fresh in the new one. We handle everything so you get your deposit back.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrap">🏢</div>
+      <h3>Office Cleaning</h3>
+      <p>Recurring commercial cleaning for offices, lobbies, break rooms, and restrooms. Before or after business hours.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrap">🏪</div>
+      <h3>Retail &amp; Storefront</h3>
+      <p>Keep your business looking its best for customers. Floors, surfaces, restrooms, and windows handled on schedule.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon-wrap">🧹</div>
+      <h3>Post-Construction</h3>
+      <p>Dust, debris, and residue removal after a renovation or new build. We restore it to move-in ready condition.</p>
+      <a href="#contact" class="service-link">Get a Quote</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT
+     Edit: headline, paragraph text, and bullet points.
+     Replace .about-img-placeholder with an <img> when ready.
+     ============================================================ -->
+<section class="section section-dark section-divider" id="about">
+  <div class="about-grid">
+
+    <!-- Swap this div for <img src="your-photo.jpg" alt="..." class="about-img"> when you have a photo -->
+    <div class="about-img-placeholder">🧽</div>
+
+    <div>
+      <span class="eyebrow eyebrow-light">About SparkClean</span>
+      <h2 class="section-title">Professional Cleaning.<br />Real Results.</h2>
+      <p class="section-sub">
+        SparkClean is a local cleaning company serving residential homes and commercial
+        businesses. We run on a strict schedule, use eco-friendly products, and send
+        the same team every visit so you always know what to expect.
+      </p>
+      <ul class="about-bullets">
+        <li>Fully insured and bonded — every cleaner is background-checked</li>
+        <li>Eco-friendly, non-toxic products safe for kids and pets</li>
+        <li>Consistent teams assigned to your property</li>
+        <li>Daily, weekly, bi-weekly, and monthly programs available</li>
+        <li>Day and evening scheduling to work around your life</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     REVIEWS
+     Edit: stars, quote text, initials, name, and detail for each card.
+     Change the avatar background color per reviewer.
+     ============================================================ -->
+<section class="section section-darker" id="reviews">
+  <div class="section-header">
+    <span class="eyebrow eyebrow-light">Client Reviews</span>
+    <h2 class="section-title">What Clients Say.</h2>
+  </div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "I've tried several cleaning services and SparkClean blows them all out of the water.
+        My house has never looked this good. They even cleaned behind the fridge!"
+      </p>
+      <div class="review-author">
+        <div class="review-avatar" style="background: #2563eb;">JM</div>
+        <div>
+          <div class="review-name">Jennifer M.</div>
+          <div class="review-detail">Homeowner · 2 months ago</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "We use them for our office every week. The team is professional, discreet, and always
+        thorough. Our clients comment on how clean the space looks."
+      </p>
+      <div class="review-author">
+        <div class="review-avatar" style="background: #16a34a;">DL</div>
+        <div>
+          <div class="review-name">David L.</div>
+          <div class="review-detail">Business Owner · 3 months ago</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "The move-out clean was incredible. I got my full security deposit back and my landlord
+        asked who did it. Highly, highly recommend SparkClean."
+      </p>
+      <div class="review-author">
+        <div class="review-avatar" style="background: #dc2626;">SR</div>
+        <div>
+          <div class="review-name">Sarah R.</div>
+          <div class="review-detail">Tenant · 1 month ago</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <span class="google-badge">
+    <span class="stars">★★★★★</span> 4.9 on Google · 200+ reviews
+  </span>
+</section>
+
+
+<!-- ============================================================
+     FAQ
+     Edit: question text and answer text inside each .faq-item.
+     Add new .faq-item blocks to add more questions.
+     ============================================================ -->
+<section class="section section-dark section-divider" id="faq">
+  <div class="section-header">
+    <span class="eyebrow eyebrow-light">Frequently Asked</span>
+    <h2 class="section-title">Questions, Answered.</h2>
+  </div>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Do you offer residential and commercial cleaning?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes — SparkClean serves both residential homes and commercial properties including
+        offices, retail storefronts, and industrial spaces. We tailor our programs to each type of property.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How often do you clean?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Whatever your property needs. We offer one-time, weekly, bi-weekly, and monthly cleaning
+        programs. We'll recommend the right cadence based on your space and usage.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Are your cleaners insured and background-checked?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Yes. Every SparkClean team member is fully background-checked, insured, and trained.
+        We're bonded so you're protected in the unlikely event of any issue.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What products do you use?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        We use eco-friendly, non-toxic cleaning products that are safe for children, pets, and
+        the environment. If you have specific sensitivities or preferences, just let us know.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        What's your satisfaction guarantee?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        If you're not happy with a clean for any reason, we'll come back and redo it free of
+        charge. No questions asked. We stand behind our work on every visit.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        How do I get a quote?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        Call (555) 000-0000 or fill out the form on this page. We'll walk your property, ask
+        the right questions, and send a clear price. Free, no commitment required.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     Edit: city/state, phone, email, hours, and form service options.
+     ============================================================ -->
+<section class="section section-darker" id="contact">
+  <div class="contact-grid">
+
+    <!-- Left: contact info -->
+    <div>
+      <span class="eyebrow eyebrow-light">Reach Us</span>
+      <h2 class="section-title">Call, Email,<br />or Send the Form.</h2>
+      <p class="section-sub">
+        A real person replies in 5 minutes or less. No spam.
+        We serve [Your City] and surrounding areas with day and evening crews.
+      </p>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value"><a href="tel:+15550000000">(555) 000-0000</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value"><a href="mailto:hello@sparkclean.com">hello@sparkclean.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Your City, State</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-value">Open Daily, 7 AM – 9 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: contact form -->
+    <div class="contact-form-card">
+      <div class="contact-form-header">
+        <h3>Get a Free Quote</h3>
+        <p>We'll respond in 5 minutes or less. No spam.</p>
+      </div>
+      <div class="contact-form-body">
+        <form id="contact-form" onsubmit="handleForm(event, 'contact-form', 'contact-success')">
+          <div class="field-row">
+            <div class="field-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane" required />
+            </div>
+            <div class="field-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(555) 000-0000" required />
+          </div>
+          <div class="field-group">
+            <label>Email (optional)</label>
+            <input type="email" placeholder="jane@email.com" />
+          </div>
+          <div class="field-group">
+            <label>Service Needed</label>
+            <select required>
+              <option value="" disabled selected>Select a service…</option>
+              <option>Residential — Standard Cleaning</option>
+              <option>Residential — Deep Cleaning</option>
+              <option>Residential — Move-In / Move-Out</option>
+              <option>Commercial — Office Cleaning</option>
+              <option>Commercial — Retail / Storefront</option>
+              <option>Commercial — Post-Construction</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Tell us about your space (optional)</label>
+            <textarea placeholder="Size, frequency, special requests, access info…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent btn-full">Send My Quote Request →</button>
+          <p class="form-note-small">By submitting, you agree we may contact you about your request.</p>
+          <div class="form-reply-badge">Free on-site walkthrough included</div>
+        </form>
+        <div class="success-msg" id="contact-success">
+          ✅ Thanks! We've received your request and will reach out within 5 minutes with your custom quote.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CTA BANNER
+     Edit: headline, subtext, phone number
+     ============================================================ -->
+<div class="cta-banner">
+  <div>
+    <h2>Get a quote in 24 hours.</h2>
+    <p>Free on-site walkthrough. No commitment required.</p>
+  </div>
+  <div class="cta-banner-btns">
+    <a href="#contact" class="btn btn-white btn-lg">Request a Quote</a>
+    <a href="tel:+15550000000" class="btn btn-outline-white btn-lg">(555) 000-0000</a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     Edit: logo, description, nav links, contact details, year
+     ============================================================ -->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-col">
+      <a class="logo" href="#">Spark<span class="dot">.</span>Clean</a>
+      <p>Professional residential and commercial cleaning services. We make your space shine on every visit.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Home Cleaning</a></li>
+        <li><a href="#services">Deep Cleaning</a></li>
+        <li><a href="#services">Move-In / Move-Out</a></li>
+        <li><a href="#services">Office Cleaning</a></li>
+        <li><a href="#services">Retail Cleaning</a></li>
+        <li><a href="#services">Post-Construction</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+15550000000">(555) 000-0000</a></li>
+        <li><a href="mailto:hello@sparkclean.com">hello@sparkclean.com</a></li>
+        <li>Your City, State</li>
+        <li>Open Daily, 7 AM – 9 PM</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 SparkClean. All rights reserved. Fully insured.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT — minimal, no libraries needed
+     handleForm: hides the form and shows a success message
+     toggleFaq:  opens/closes FAQ accordion items
+     ============================================================ -->
+<script>
+  function handleForm(event, formId, successId) {
+    event.preventDefault();
+    document.getElementById(formId).style.display = 'none';
+    document.getElementById(successId).style.display = 'block';
+  }
+
+  function toggleFaq(button) {
+    const item = button.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close any currently open item
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    // Open the clicked one (unless it was already open)
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+
+
+</body>
+</html>
