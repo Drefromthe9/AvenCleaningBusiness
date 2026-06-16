@@ -1,5 +1,5 @@
 /* =============================================================
-   SPARKCLEAN — styles.css
+   CZN CLEANING CO. — styles.css
    -------------------------------------------------------------
    HOW TO EDIT:
    - Change colors in the :root section at the top
@@ -22,8 +22,8 @@
   --white:        #ffffff;
   --gray:         #999999;   /* secondary / muted text */
   --gray-light:   #f5f5f5;   /* light section background */
-  --accent:       #2563eb;   /* blue — buttons, links, highlights */
-  --accent-light: #3b82f6;   /* lighter blue for hover */
+  --accent:       #B8952A;   /* gold — buttons, links, highlights */
+  --accent-light: #C9A84C;   /* lighter gold for hover */
   --green:        #22c55e;   /* checkmarks */
   --radius:       4px;       /* corner rounding (increase for rounder look) */
 }
@@ -139,6 +139,16 @@ nav ul a:hover { color: var(--white); }
    ============================================================= */
 .hero {
   background: var(--black);
+  /* ── HERO BACKGROUND IMAGE ──────────────────────────────────
+     To add a background photo:
+     1. Put your image in the images/ folder (e.g. hero-bg.jpg)
+     2. Uncomment the two lines below and update the filename
+     3. Adjust the 0.75 value (0 = no darkening, 1 = fully black)
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                    url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  ─────────────────────────────────────────────────────────── */
   color: var(--white);
   padding: 7rem 5% 5rem;
   display: grid;
@@ -443,6 +453,30 @@ nav ul a:hover { color: var(--white); }
 }
 .service-card:hover { background: var(--dark3); }
 
+/* ── SERVICE CARD IMAGE ──────────────────────────────────────
+   Sits at the top of each card, bleeding to the edges.
+   If no image is provided the dark placeholder color shows.
+   ────────────────────────────────────────────────────────── */
+.service-img {
+  /* Bleed out to card edges */
+  width: calc(100% + 4rem);
+  margin: -2.25rem -2rem 1.5rem;
+  height: 190px;
+  overflow: hidden;
+  background: var(--dark3); /* fallback color if image is missing */
+  border-bottom: 1px solid var(--border);
+}
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-img img {
+  transform: scale(1.04); /* subtle zoom on hover */
+}
+
 .service-icon-wrap {
   width: 52px;
   height: 52px;
@@ -480,7 +514,16 @@ nav ul a:hover { color: var(--white); }
   align-items: center;
 }
 
-/* Replace this with a real <img> when you have a photo */
+/* About image — swap the placeholder div for <img class="about-img"> */
+.about-img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+/* Fallback shown when no real photo is available yet */
 .about-img-placeholder {
   background: var(--dark3);
   border-radius: 8px;
